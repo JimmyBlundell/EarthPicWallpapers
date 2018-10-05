@@ -8,15 +8,11 @@ reddit = praw.Reddit(client_id = 'zpLjVh3uoEoWog',
 
 subreddit = reddit.subreddit('EarthPorn')
 
-hot_pics = subreddit.hot(limit = 10)
+hot_pics = subreddit.hot(limit = 1)
 
 for submission in hot_pics:
     if not submission.stickied:
         print(submission.title)
-for comment in subreddit.comments(limit = 50):
-    print(comment.author)
-
-    
-
+ 
     
                       
